@@ -25,8 +25,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Installation Steps</h2>
 
 <p>
-<img src=<img width="957" height="678" alt="Screenshot 2026-08-13 131200" src="https://github.com/user-attachments/assets/758249b3-0a37-41ec-a0de-321ef4e8720e" />
-/>
+<img src=<img width="957" height="678" alt="Screenshot 2026-08-13 131200" src="https://github.com/user-attachments/assets/758249b3-0a37-41ec-a0de-321ef4e8720e"/>
 </p>
 <p>
 Log into Microsoft Azure and create a virtual machine.
