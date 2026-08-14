@@ -19,9 +19,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>List of Prerequisites</h2>
 
 - Set up Virtual Machine in Microsoft Azure
-- Visit osticket.com
-- Click Support, then Documentation
-- Click Installation and download the prerequisite files (Windows Recommended Links)
+- Download [OsTicket Installation.zip](https://drive.google.com/uc?export=download&id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD)
    
 
 <h2>Installation Steps</h2>
