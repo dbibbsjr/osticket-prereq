@@ -64,16 +64,42 @@ Once logged into the VM, download the osTicket installation zip file (linked abo
 </p>
 
 <p>
-Open Control Panel, Programs, Programs and Features, then Turn Windows features on or off.
+Open Control Panel, Programs -> Programs and Features -> then Turn Windows features on or off.
 </p>
 <p>
 <img <img width="1402" height="586" alt="Screenshot 2026-08-13 205557" src="https://github.com/user-attachments/assets/a4ed9519-1b32-4bca-9a57-4be813fb503d"/>
 <p>
-Select Internet Information Services and expand the folder, expand World Wide Web Services, expand Application Development Features, select CGI.
+Select Internet Information Services and expand the folder -> expand World Wide Web Services -> expand Application Development Features -> select CGI.
 </p>
 <p>
 <img <img width="552" height="490" alt="Screenshot 2026-08-13 205739" src="https://github.com/user-attachments/assets/8ff6673f-5862-4fa5-96c3-2807af4728e9" />
+</p>
 
+<p>
+Within the osTicket-Installation-Files folder, install PHP Manager for IIS (PHPManagerForIIS_V1.5.0).
+</p>
+<p>
+<img <img width="1060" height="468" alt="Screenshot 2026-08-13 205907" src="https://github.com/user-attachments/assets/04f6f154-844d-498a-9d3d-c38cdbfebbee"/>
+</p>
+<p>
+Within the osTicket-Installation-Files folder, install Rewrite Module (rewrite_amd64_en-US).
+</p>
+<p>
+<img <img width="1137" height="493" alt="Screenshot 2026-08-13 210011" src="https://github.com/user-attachments/assets/851a2ba8-b90f-4b62-b8be-420fc7892944" />
+</p>
+
+<p>
+Navigate to the C drive and create a new folder, PHP. 
+</p>
+<p>
+<img <img width="1020" height="466" alt="Screenshot 2026-08-13 210137" src="https://github.com/user-attachments/assets/e1435724-aa57-4b0a-ba56-d8cf4071845f"/>
 
 </p>
+<p>
+Within the osTicket-Installation-Files folder, install Rewrite Module (rewrite_amd64_en-US).
+</p>
+<p>
+<img <img width="1137" height="493" alt="Screenshot 2026-08-13 210011" src="https://github.com/user-attachments/assets/851a2ba8-b90f-4b62-b8be-420fc7892944" />
+</p>
+
 <br />
