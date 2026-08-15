@@ -58,9 +58,22 @@ Copy the public IP address for the VM, then log into the VM using the username a
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Once logged into the VM, download the osTicket installation zip file (linked above in the Prerequisites above) and unzip it to the desktop. Leave the file name defaulted to "osTicket-Installation-Files".
+<p>
+<img <img width="1917" height="507" alt="Annotation 2026-08-14 221436" src="https://github.com/user-attachments/assets/3d56a250-689d-4cbd-8aa2-a69957d2f614"/>
+</p>
+
+<p>
+Open Control Panel, Programs, Programs and Features, then Turn Windows features on or off.
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<img <img width="1402" height="586" alt="Screenshot 2026-08-13 205557" src="https://github.com/user-attachments/assets/a4ed9519-1b32-4bca-9a57-4be813fb503d"/>
+<p>
+Select Internet Information Services and expand the folder, expand World Wide Web Services, expand Application Development Features, select CGI.
+</p>
+<p>
+<img <img width="552" height="490" alt="Screenshot 2026-08-13 205739" src="https://github.com/user-attachments/assets/8ff6673f-5862-4fa5-96c3-2807af4728e9" />
+
+
 </p>
 <br />
