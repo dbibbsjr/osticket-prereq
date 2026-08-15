@@ -302,7 +302,9 @@ The installation is complete and ready for use! You can access the help desk log
 <p>
 <img width="1920" height="922" alt="Annotation 2026-08-14 232224" src="https://github.com/user-attachments/assets/0f1f98ec-c6d3-4ff3-95a6-866212f35d87" />
 </p>
-
+<p>
+<img width="1920" height="820" alt="Annotation 2026-08-15 175307" src="https://github.com/user-attachments/assets/e04da4a6-1920-46ba-8a67-0cf5c8c8f2d8" />
+</p>
 <p>
 The installation is complete but there is a bit of clean up left to do. 
 Navigate to C: -> inetpub -> wwwroot -> osTicket and delete the setup folder.
