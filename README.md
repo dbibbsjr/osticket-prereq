@@ -312,6 +312,16 @@ Navigate to C: -> inetpub -> wwwroot -> osTicket and delete the setup folder.
 </p>
 
 <p>
+Navigate to C: -> inetpub -> wwwroot -> osTicket -> include, and right-click ost-config.php -> Properties. On the General Tab -> click Read-only -> Apply -> OK.
+</p>
+<p>
+<img width="957" height="1013" alt="Annotation 2026-08-14 232609" src="https://github.com/user-attachments/assets/fb7547a5-84c4-467b-b526-4f91858dd84a"/>
+</p>
+<p>
+<img width="477" height="623" alt="Annotation 2026-08-14 232735" src="https://github.com/user-attachments/assets/04520ab0-ab40-4d30-b5d9-e42f7ce0380c" />
+</p>
+
+<p>
 
 </p>
 
