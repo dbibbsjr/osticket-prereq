@@ -164,7 +164,7 @@ Within IIS, select PHP Manager and register new PHP version. Click the box with 
 </p>
 
 <p>
-Return to the IIS Manager and Reload IIS. To the right under Manage Server you click restart or stop -> start.
+Return to the IIS Manager and Reload IIS. To the right under Manage Server you click Restart or Stop -> Start.
 </p>
 <p>
 <img width="1918" height="822" alt="Annotation 2026-08-14 223225" src="https://github.com/user-attachments/assets/f90a809a-7015-4cf6-88db-6fb5d0534a17"/>
