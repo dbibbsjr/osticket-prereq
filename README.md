@@ -55,10 +55,55 @@ This project documents the deployment and configuration of an osTicket help desk
 | Documentation       | GitHub / Markdown                   |
 
 
-<h2>List of Prerequisites</h2>
+---
 
-- Set up a virtual machine (VM) in Microsoft Azure
-- Download [OsTicket Installation Files](https://drive.google.com/uc?export=download&id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD)
+## Lab Architecture
+
+The completed lab uses the following general architecture:
+
+```text
+                    Microsoft Azure
+                          │
+                          ▼
+                 Windows 10 VM
+                          │
+                 ┌────────┴────────┐
+                 │                 │
+                 ▼                 ▼
+                IIS             MySQL
+                 │                 │
+                 ▼                 │
+                PHP                │
+                 │                 │
+                 └────────┬────────┘
+                          ▼
+                       osTicket
+                          │
+              ┌───────────┴───────────┐
+              ▼                       ▼
+        Staff/Admin Portal       End User Portal
+```
+
+The Windows virtual machine hosts IIS, PHP, and the osTicket application while MySQL provides the application database.
+
+---
+
+## Prerequisites
+
+Before beginning the installation, the following were required:
+
+* Microsoft Azure account
+* Windows virtual machine
+* Remote Desktop access
+* osTicket installation files
+* IIS
+* PHP
+* MySQL
+* Required Visual C++ runtime
+* PHP Manager for IIS
+* IIS URL Rewrite Module
+* HeidiSQL
+* Download the files need from[here](https://drive.google.com/uc?export=download&id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD)
    
 
 <h2>Installation Steps</h2>
