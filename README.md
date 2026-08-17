@@ -109,7 +109,13 @@ Before beginning the installation, the following were required:
 * Download the files need from [here](https://drive.google.com/uc?export=download&id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD)
    
 
-<h2>Installation Steps</h2>
+---
+
+## Deployment Process
+
+### 1. Deploy the Azure Virtual Machine
+
+---
 
 <p>
 Log into Microsoft Azure and create a VM. Feel free to use any username/password at your own discretion.
@@ -150,6 +156,9 @@ Once logged into the VM, download the osTicket installation zip file (linked abo
 <img width="1917" height="507" alt="Annotation 2026-08-14 221436" src="https://github.com/user-attachments/assets/3d56a250-689d-4cbd-8aa2-a69957d2f614"/>
 </p>
 
+### 2. Configure IIS
+---
+
 <p>
 Open Control Panel, Programs -> Programs and Features -> then Turn Windows features on or off.
 </p>
@@ -161,6 +170,10 @@ Select Internet Information Services and expand the folder -> expand World Wide 
 <p>
 <img width="552" height="490" alt="Screenshot 2026-08-13 205739" src="https://github.com/user-attachments/assets/8ff6673f-5862-4fa5-96c3-2807af4728e9" />
 </p>
+
+---
+
+### 3. Install PHP and IIS Components
 
 <p>
 Within the osTicket-Installation-Files folder, install PHP Manager for IIS (PHPManagerForIIS_V1.5.0).
@@ -196,6 +209,10 @@ Within the osTicket-Installation-Files folder, install VC_redist.x86
 <p>
 <img width="1097" height="465" alt="Screenshot 2026-08-13 210552" src="https://github.com/user-attachments/assets/3d9fa461-01a9-4e5d-b180-7a48e8185ebd"/>
 </p>
+
+---
+
+### 4. Install MySQL
 
 <p>
 Within the osTicket-Installation-Files folder, install MySQL 5.5.62 (mysql-5.5.62-win32). Select Typical Setup -> on the next screen ensure to select Launch Configuration Wizard -> then Finish
@@ -256,6 +273,10 @@ Return to the IIS Manager and Reload IIS. To the right under Manage Server you c
 <p>
 <img width="1918" height="822" alt="Annotation 2026-08-14 223225" src="https://github.com/user-attachments/assets/f90a809a-7015-4cf6-88db-6fb5d0534a17"/>
 </p>
+---
+
+### 5. Deploy osTicket
+
 <p>
 Within osTicket-Installation-Files folder, extract osTicket-v1.15.8. Open osTicket-v1.15.8, and copy the upload folder to C:\inetpub\wwwroot. Rename the copied upload folder to osTicket. Return to the IIS Manager and Reload IIS.
 </p>
@@ -279,6 +300,10 @@ To the left under Connections, navigate to Sites -> Default Web Site -> osTicket
 <img width="1915" height="1027" alt="Annotation 2026-08-14 224806" src="https://github.com/user-attachments/assets/e423dd37-9792-43c2-b7dc-faec73c3db76"/>
 </p>
 
+---
+
+### 6. Configure Required PHP Extensions
+
 <p>
 You will notice there are a few recommended extensions that are disabled. Return to IIS -> Sites -> Default Web Site -> osTicket. Open PHP Manager. Select enable or disable an extension.
 </p>
@@ -298,6 +323,9 @@ Refresh the osTicket setup site in the browser and confirm the extensions are en
 <p>
 <img width="1902" height="1021" alt="Annotation 2026-08-14 225353" src="https://github.com/user-attachments/assets/0b3859a9-9f47-4c5f-ad34-7e7a9c26759e" />
 </p>
+---
+
+### 7. Configure osTicket
 
 <p>
 Navigate to the C Drive -> inetpub -> wwwroot -> osTicket -> include. Within the include folder, rename ost-sampleconfig.php -> ost-config.php
@@ -347,6 +375,10 @@ Return to the browser and click continue to continue setting up osTicket. Enter 
 <img width="1917" height="1026" alt="Annotation 2026-08-14 231130" src="https://github.com/user-attachments/assets/e415c727-1f87-4a70-9a1b-31c7ece63032" />
 </p>
 
+---
+
+### 8. Create the osTicket Database
+
 <p>
 Within the osTicket-Installation-Files folder, install HeidiSQL (HeidiSql_12.3.0.6589_Setup). Click the Launch HeidiSQL box, then Finish. Skip the Donation window, then at the bottom left click New and create a new session.
 </p>
@@ -373,6 +405,9 @@ Enter the username and password recorded when setting up MySQL. Then click Open 
 <img width="393" height="317" alt="Annotation 2026-08-14 231808" src="https://github.com/user-attachments/assets/64d069c1-4d94-4442-bd69-c30b6b749d83" />
 </p>
 
+---
+
+### 9. Complete Installation
 
 <p>
 Return to the browser to finish setting up osTicket. Enter the MySQL Database (osTicket) and the MySQL username and password. Then click Install Now
@@ -392,6 +427,11 @@ The installation is complete and ready for use! You can access the help desk log
 <p>
 <img width="1920" height="820" alt="Annotation 2026-08-15 175307" src="https://github.com/user-attachments/assets/e04da4a6-1920-46ba-8a67-0cf5c8c8f2d8" />
 </p>
+
+---
+
+## Post-Installation Cleanup
+
 <p>
 The installation is complete but there is a bit of clean up left to do. 
 Navigate to C: -> inetpub -> wwwroot -> osTicket and delete the setup folder.
@@ -414,3 +454,19 @@ Also ost-config.php needs to be changed to read-only permissions. To do so navig
 </p>
 
 <br />
+
+---
+
+## Verification
+
+The completed deployment was verified by confirming that:
+
+* IIS was running
+* PHP was registered with IIS
+* Required PHP extensions were enabled
+* MySQL was accessible
+* The osTicket database existed
+* osTicket successfully connected to the database
+* The osTicket staff portal was accessible
+* The osTicket end-user portal was accessible
+* Installation cleanup was completed
