@@ -156,7 +156,10 @@ Once logged into the VM, download the osTicket installation zip file (linked abo
 <img width="1917" height="507" alt="Annotation 2026-08-14 221436" src="https://github.com/user-attachments/assets/3d56a250-689d-4cbd-8aa2-a69957d2f614"/>
 </p>
 
+---
+
 ### 2. Configure IIS
+
 ---
 
 <p>
@@ -174,6 +177,8 @@ Select Internet Information Services and expand the folder -> expand World Wide 
 ---
 
 ### 3. Install PHP and IIS Components
+
+---
 
 <p>
 Within the osTicket-Installation-Files folder, install PHP Manager for IIS (PHPManagerForIIS_V1.5.0).
@@ -214,6 +219,8 @@ Within the osTicket-Installation-Files folder, install VC_redist.x86
 
 ### 4. Install MySQL
 
+---
+
 <p>
 Within the osTicket-Installation-Files folder, install MySQL 5.5.62 (mysql-5.5.62-win32). Select Typical Setup -> on the next screen ensure to select Launch Configuration Wizard -> then Finish
 </p>
@@ -245,6 +252,8 @@ Next you will create a username and password. Record the MySQL credentials secur
 ---
 
 ### 5. Deploy osTicket
+
+---
 
 <p>
 Open Internet Information Services Manager (IIS) as an Admin.
@@ -305,6 +314,8 @@ To the left under Connections, navigate to Sites -> Default Web Site -> osTicket
 
 ### 6. Configure Required PHP Extensions
 
+---
+
 <p>
 You will notice there are a few recommended extensions that are disabled. Return to IIS -> Sites -> Default Web Site -> osTicket. Open PHP Manager. Select enable or disable an extension.
 </p>
@@ -324,9 +335,12 @@ Refresh the osTicket setup site in the browser and confirm the extensions are en
 <p>
 <img width="1902" height="1021" alt="Annotation 2026-08-14 225353" src="https://github.com/user-attachments/assets/0b3859a9-9f47-4c5f-ad34-7e7a9c26759e" />
 </p>
+
 ---
 
 ### 7. Configure osTicket
+
+---
 
 <p>
 Navigate to the C Drive -> inetpub -> wwwroot -> osTicket -> include. Within the include folder, rename ost-sampleconfig.php -> ost-config.php
@@ -380,6 +394,8 @@ Return to the browser and click continue to continue setting up osTicket. Enter 
 
 ### 8. Create the osTicket Database
 
+---
+
 <p>
 Within the osTicket-Installation-Files folder, install HeidiSQL (HeidiSql_12.3.0.6589_Setup). Click the Launch HeidiSQL box, then Finish. Skip the Donation window, then at the bottom left click New and create a new session.
 </p>
@@ -410,6 +426,8 @@ Enter the username and password recorded when setting up MySQL. Then click Open 
 
 ### 9. Complete Installation
 
+---
+
 <p>
 Return to the browser to finish setting up osTicket. Enter the MySQL Database (osTicket) and the MySQL username and password. Then click Install Now
 </p>
@@ -432,6 +450,8 @@ The installation is complete and ready for use! You can access the help desk log
 ---
 
 ## Post-Installation Cleanup
+
+---
 
 <p>
 The installation is complete but there is a bit of clean up left to do. 
@@ -459,6 +479,8 @@ Also ost-config.php needs to be changed to read-only permissions. To do so navig
 ---
 
 ## Verification
+
+---
 
 The completed deployment was verified by confirming that:
 
