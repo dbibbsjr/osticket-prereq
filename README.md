@@ -242,6 +242,10 @@ Next you will create a username and password. Record the MySQL credentials secur
 <img width="617" height="467" alt="Annotation 2026-08-14 222441" src="https://github.com/user-attachments/assets/0a62cbce-38a4-466d-a1ca-dc098d203145" />
 </p>
 
+---
+
+### 5. Deploy osTicket
+
 <p>
 Open Internet Information Services Manager (IIS) as an Admin.
 </p>
@@ -273,9 +277,6 @@ Return to the IIS Manager and Reload IIS. To the right under Manage Server you c
 <p>
 <img width="1918" height="822" alt="Annotation 2026-08-14 223225" src="https://github.com/user-attachments/assets/f90a809a-7015-4cf6-88db-6fb5d0534a17"/>
 </p>
----
-
-### 5. Deploy osTicket
 
 <p>
 Within osTicket-Installation-Files folder, extract osTicket-v1.15.8. Open osTicket-v1.15.8, and copy the upload folder to C:\inetpub\wwwroot. Rename the copied upload folder to osTicket. Return to the IIS Manager and Reload IIS.
