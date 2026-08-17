@@ -2,7 +2,10 @@
 <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
 </p>
 
-<h1>osTicket - Prerequisites and Installation</h1>
+# osTicket Help Desk Deployment Lab
+
+## Overview
+
 This project documents the deployment and configuration of an osTicket help desk environment using Microsoft Azure, Windows, IIS, PHP, and MySQL. The lab demonstrates hands-on experience with virtual machine deployment, Windows administration, web server configuration, application installation, database configuration, and help desk platform deployment. The purpose of this project is to demonstrate practical IT infrastructure and application deployment skills that are relevant to entry-level help desk and IT support roles.<br />
 
 <h2>Project Objectives</h2>
