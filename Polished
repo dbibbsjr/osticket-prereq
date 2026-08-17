@@ -1,0 +1,366 @@
+# osTicket Help Desk Deployment Lab
+
+## Overview
+
+This project documents the deployment and configuration of an **osTicket help desk environment** using Microsoft Azure, Windows, Internet Information Services (IIS), PHP, MySQL, and HeidiSQL.
+
+The lab demonstrates hands-on experience with virtual machine deployment, Windows administration, web server configuration, PHP application deployment, database configuration, file permissions, and help desk platform installation.
+
+The purpose of this project is to demonstrate practical IT infrastructure and application deployment skills that are relevant to entry-level help desk and IT support roles.
+
+---
+
+## Project Objectives
+
+* Deploy a Windows virtual machine in Microsoft Azure
+* Configure Windows for web application hosting
+* Install and configure IIS
+* Configure PHP for IIS
+* Install and configure MySQL
+* Create an application database
+* Deploy osTicket
+* Configure osTicket and its database connection
+* Configure required PHP extensions
+* Apply appropriate application file permissions
+* Verify the completed help desk installation
+* Document the deployment process for future reference
+
+---
+
+## Skills Demonstrated
+
+* Microsoft Azure virtual machine deployment
+* Windows administration
+* Remote Desktop
+* IIS configuration
+* Web server administration
+* PHP configuration
+* MySQL database configuration
+* Database management with HeidiSQL
+* Web application deployment
+* File and folder permissions
+* Application configuration
+* Help desk platform deployment
+* Technical documentation
+* Troubleshooting and verification
+
+---
+
+## Technologies & Environment
+
+| Component           | Technology                          |
+| ------------------- | ----------------------------------- |
+| Cloud Platform      | Microsoft Azure                     |
+| Virtual Machine     | Azure Virtual Machine               |
+| Operating System    | Windows 10 Enterprise 22H2          |
+| Remote Access       | Remote Desktop Protocol (RDP)       |
+| Web Server          | Internet Information Services (IIS) |
+| Application         | osTicket                            |
+| PHP                 | PHP 7.3.8                           |
+| Database            | MySQL 5.5.62                        |
+| Database Management | HeidiSQL 12.3                       |
+| Documentation       | GitHub / Markdown                   |
+
+---
+
+## Lab Architecture
+
+The completed lab uses the following general architecture:
+
+```text
+                    Microsoft Azure
+                          │
+                          ▼
+                 Windows 10 VM
+                          │
+                 ┌────────┴────────┐
+                 │                 │
+                 ▼                 ▼
+                IIS             MySQL
+                 │                 │
+                 ▼                 │
+                PHP                │
+                 │                 │
+                 └────────┬────────┘
+                          ▼
+                       osTicket
+                          │
+              ┌───────────┴───────────┐
+              ▼                       ▼
+        Staff/Admin Portal       End User Portal
+```
+
+The Windows virtual machine hosts IIS, PHP, and the osTicket application while MySQL provides the application database.
+
+---
+
+## Prerequisites
+
+Before beginning the installation, the following were required:
+
+* Microsoft Azure account
+* Windows virtual machine
+* Remote Desktop access
+* osTicket installation files
+* IIS
+* PHP
+* MySQL
+* Required Visual C++ runtime
+* PHP Manager for IIS
+* IIS URL Rewrite Module
+* HeidiSQL
+
+---
+
+## Deployment Process
+
+### 1. Deploy the Azure Virtual Machine
+
+A Windows virtual machine was created in Microsoft Azure.
+
+After deployment, the VM's public IP address was used to establish a Remote Desktop connection.
+
+---
+
+### 2. Configure IIS
+
+IIS was enabled through Windows Features.
+
+The following IIS component was enabled:
+
+```text
+Internet Information Services
+└── World Wide Web Services
+    └── Application Development Features
+        └── CGI
+```
+
+CGI support was required for PHP to run through IIS.
+
+---
+
+### 3. Install PHP and IIS Components
+
+The lab environment was configured with:
+
+* PHP Manager for IIS
+* IIS URL Rewrite Module
+* PHP 7.3.8
+* Visual C++ Redistributable
+
+PHP was extracted to:
+
+```text
+C:\PHP
+```
+
+PHP was then registered with IIS using PHP Manager.
+
+---
+
+### 4. Install MySQL
+
+MySQL 5.5.62 was installed and configured using the MySQL Configuration Wizard.
+
+A MySQL username and password were created during configuration.
+
+These credentials were securely recorded for use during the osTicket database configuration.
+
+---
+
+### 5. Deploy osTicket
+
+The osTicket application files were extracted and the `upload` directory was copied to:
+
+```text
+C:\inetpub\wwwroot
+```
+
+The directory was renamed:
+
+```text
+osTicket
+```
+
+The application was then made available through the IIS Default Web Site.
+
+---
+
+### 6. Configure Required PHP Extensions
+
+The osTicket setup page was used to identify required PHP extensions.
+
+The following extensions were enabled:
+
+```text
+php_imap.dll
+php_intl.dll
+php_opcache.dll
+```
+
+The application was refreshed afterward to verify that the required extensions were recognized.
+
+---
+
+### 7. Configure osTicket
+
+The osTicket configuration file was created from:
+
+```text
+ost-sampleconfig.php
+```
+
+and renamed:
+
+```text
+ost-config.php
+```
+
+The osTicket setup interface was then used to configure:
+
+* Help desk name
+* Help desk email address
+* Administrator account
+* Administrator credentials
+* Database connection information
+
+---
+
+### 8. Create the osTicket Database
+
+HeidiSQL was used to connect to the MySQL server.
+
+A database named:
+
+```text
+osTicket
+```
+
+was created for the application.
+
+The database credentials were then entered into the osTicket installation interface.
+
+---
+
+### 9. Complete Installation
+
+After the database connection was configured, osTicket was installed and verified.
+
+The completed environment provided both:
+
+**Staff/Admin Portal**
+
+```text
+/osTicket/scp/login.php
+```
+
+**End User Portal**
+
+```text
+/osTicket/
+```
+
+---
+
+## Post-Installation Cleanup
+
+After installation, the environment was cleaned up by removing the osTicket setup directory.
+
+The `ost-config.php` configuration file was also set to read-only after installation.
+
+> **Security Note:** File permissions should follow the principle of least privilege in a production environment. The permissions used during this instructional lab should not automatically be treated as production security recommendations.
+
+---
+
+## Verification
+
+The completed deployment was verified by confirming that:
+
+* IIS was running
+* PHP was registered with IIS
+* Required PHP extensions were enabled
+* MySQL was accessible
+* The osTicket database existed
+* osTicket successfully connected to the database
+* The osTicket staff portal was accessible
+* The osTicket end-user portal was accessible
+* Installation cleanup was completed
+
+---
+
+## Key Takeaways
+
+This lab provided hands-on experience with several areas of IT support and systems administration.
+
+### Windows Administration
+
+* Configured Windows features
+* Managed IIS
+* Worked with Windows file permissions
+* Used Remote Desktop to administer a virtual machine
+
+### Web Application Deployment
+
+* Configured IIS for PHP
+* Registered PHP with IIS
+* Enabled required PHP extensions
+* Deployed a PHP-based web application
+
+### Database Administration
+
+* Installed MySQL
+* Configured database credentials
+* Created an application database
+* Used HeidiSQL to manage the database
+
+### Help Desk Technology
+
+* Deployed osTicket
+* Configured a help desk environment
+* Configured administrator access
+* Verified the end-user ticketing interface
+
+### Technical Documentation
+
+* Documented installation prerequisites
+* Documented configuration steps
+* Documented application verification
+* Created a repeatable deployment guide
+
+---
+
+## Lab Environment Note
+
+This repository documents an instructional lab environment using specific software versions selected for the original deployment.
+
+The versions documented in this project include:
+
+```text
+Windows 10 Enterprise 22H2
+PHP 7.3.8
+MySQL 5.5.62
+osTicket 1.15.8
+HeidiSQL 12.3
+```
+
+These versions are documented for **lab reproducibility** and should not be interpreted as recommendations for a new production deployment.
+
+---
+
+## Project Structure
+
+```text
+osticket-prereq/
+│
+└── README.md
+```
+
+---
+
+## Purpose
+
+This project is part of my IT support portfolio and demonstrates hands-on experience deploying and configuring a help desk application in a Windows-based environment.
+
+The project focuses on practical skills including cloud VM deployment, Windows administration, IIS configuration, PHP application deployment, MySQL database configuration, application setup, and technical documentation.
+
+It serves as the foundation for additional help desk projects focused on **troubleshooting, incident management, networking, Windows administration, and user support**.
