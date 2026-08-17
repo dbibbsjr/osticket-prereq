@@ -3,14 +3,41 @@
 </p>
 
 <h1>osTicket - Prerequisites and Installation</h1>
-This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
+This project documents the deployment and configuration of an osTicket help desk environment using Microsoft Azure, Windows, IIS, PHP, and MySQL. The lab demonstrates hands-on experience with virtual machine deployment, Windows administration, web server configuration, application installation, database configuration, and help desk platform deployment. The purpose of this project is to demonstrate practical IT infrastructure and application deployment skills that are relevant to entry-level help desk and IT support roles.<br />
+
+<h2>Project Objectives</h2>
+
+- Deploy a Windows virtual machine in Microsoft Azure
+- Configure Windows for web application hosting
+- Install and configure IIS
+- Configure PHP for IIS
+- Install and configure MySQL
+- Create an application database
+- Deploy osTicket
+- Configure osTicket and its database connection
+- Configure required PHP extensions
+- Apply appropriate application file permissions
+- Verify the completed help desk installation
+- Document the deployment process for future reference
 
 
-<h2>Environments and Technologies Used</h2>
+<h2>Skills Demonstrated</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
+- Microsoft Azure virtual machine deployment
+- Windows administration
 - Remote Desktop
-- Internet Information Services (IIS)
+- IIS configuration
+- Web server administration
+- PHP configuration
+- MySQL database configuration
+- Database management with HeidiSQL
+- Web application deployment
+- File and folder permissions
+- Application configuration
+- Help desk platform deployment
+- Technical documentation
+- Troubleshooting and verification
+- Technologies & Environment
 
 <h2>Operating Systems Used </h2>
 
@@ -25,7 +52,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Installation Steps</h2>
 
 <p>
-Log into Microsoft Azure and create a VM. Feel free to use any username/password at your own discrestion.
+Log into Microsoft Azure and create a VM. Feel free to use any username/password at your own discretion.
 </p>
 <p>
 <img width="957" height="678" alt="Screenshot 2026-08-13 131200" src="https://github.com/user-attachments/assets/44f38f1c-7212-4f6b-ab1e-f66f09e3272a" />
@@ -129,7 +156,7 @@ Within the Configuration Wizard, select Standard Configuration.
 <img width="618" height="471" alt="Screenshot 2026-08-13 210941" src="https://github.com/user-attachments/assets/eb86598c-18a5-4131-87f1-622d09a0c1f7"/>
 </p>
 <p>
-Next you will create a username and password. MAKE SURE YOU KEEP A RECORD OF THIS FOR LATER! Then Execute.
+Next you will create a username and password. Record the MySQL credentials securely for useduring the osTicket database configuration. Then Execute.
 </p>
 <p>
 <img width="617" height="472" alt="Screenshot 2026-08-13 211057" src="https://github.com/user-attachments/assets/2ab98108-3417-46d8-80ce-bad5834203d6"/>
