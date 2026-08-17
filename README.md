@@ -103,7 +103,7 @@ Before beginning the installation, the following were required:
 * PHP Manager for IIS
 * IIS URL Rewrite Module
 * HeidiSQL
-* Download the files need from[here](https://drive.google.com/uc?export=download&id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD)
+* Download the files need from [here](https://drive.google.com/uc?export=download&id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD)
    
 
 <h2>Installation Steps</h2>
