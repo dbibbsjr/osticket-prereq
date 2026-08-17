@@ -39,9 +39,21 @@ This project documents the deployment and configuration of an osTicket help desk
 - Troubleshooting and verification
 - Technologies & Environment
 
-<h2>Operating Systems Used </h2>
+## Technologies & Environment
 
-- Windows 10 Enterprise</b> (22H2)
+| Component           | Technology                          |
+| ------------------- | ----------------------------------- |
+| Cloud Platform      | Microsoft Azure                     |
+| Virtual Machine     | Azure Virtual Machine               |
+| Operating System    | Windows 10 Enterprise 22H2          |
+| Remote Access       | Remote Desktop Protocol (RDP)       |
+| Web Server          | Internet Information Services (IIS) |
+| Application         | osTicket                            |
+| PHP                 | PHP 7.3.8                           |
+| Database            | MySQL 5.5.62                        |
+| Database Management | HeidiSQL 12.3                       |
+| Documentation       | GitHub / Markdown                   |
+
 
 <h2>List of Prerequisites</h2>
 
